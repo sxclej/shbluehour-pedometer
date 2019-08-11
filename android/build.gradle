@@ -1,4 +1,4 @@
-group 'cachet.plugins.pedometer'
+group 'com.today.step.lib'
 version '1.0-SNAPSHOT'
 buildscript {
     repositories {
@@ -18,10 +18,12 @@ rootProject.allprojects {
 }
 apply plugin: 'com.android.library'
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
+        targetSdkVersion 28
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -31,4 +33,7 @@ android {
 
 dependencies {
     compileOnly files('libs/flutter.jar')
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    implementation "com.android.support:appcompat-v7:28.0.0"
 }
