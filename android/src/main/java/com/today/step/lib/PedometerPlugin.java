@@ -1,6 +1,7 @@
 package com.today.step.lib;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -10,19 +11,18 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
 
-import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.EventChannel;
+import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /**
  * SensorsPlugin
  */
-public class PedometerPlugin extends FlutterActivity implements EventChannel.StreamHandler {
+public class PedometerPlugin implements EventChannel.StreamHandler {
   private static final String STEP_COUNT_CHANNEL_NAME =
           "pedometer.eventChannel";
 
@@ -37,6 +37,9 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
   private ISportStepInterface iSportStepInterface;
 
   int stepCount = 0;
+
+  private final Activity activity;
+  private final Context context;
   /**
    * Plugin registration.
    */
@@ -44,7 +47,7 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
     final EventChannel eventChannel =
             new EventChannel(registrar.messenger(), STEP_COUNT_CHANNEL_NAME);
     eventChannel.setStreamHandler(
-            new PedometerPlugin(registrar.context(), Sensor.TYPE_STEP_COUNTER));
+            new PedometerPlugin(registrar.context(), Sensor.TYPE_STEP_COUNTER,registrar.activity()));
   }
 
   private SensorEventListener sensorEventListener;
@@ -52,9 +55,12 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
   private final Sensor sensor;
 
   @TargetApi(Build.VERSION_CODES.CUPCAKE)
-  private PedometerPlugin(Context context, int sensorType) {
+  private PedometerPlugin(Context context, int sensorType,Activity activity) {
     sensorManager = (SensorManager) context.getSystemService(context.SENSOR_SERVICE);
     sensor = sensorManager.getDefaultSensor(sensorType);
+    this.activity = activity;
+    this.context = activity.getApplicationContext();
+    createService(this.activity,this.context);
   }
 
   @TargetApi(Build.VERSION_CODES.CUPCAKE)
@@ -81,7 +87,7 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
       public void onSensorChanged(SensorEvent event) {
 //        stepCount = (int) event.values[0];
         if(iSportStepInterface == null){
-          stepCount = 888;
+          stepCount = -1;
         }else {
           try {
             stepCount = iSportStepInterface.getCurrentTimeSportStep();
@@ -95,17 +101,13 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
     };
   }
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
+  protected void createService(Activity _activity,Context _context) {
     //初始化计步模块
-    TodayStepManager.startTodayStepService(getApplication());
-
+    TodayStepManager.startTodayStepService(_activity.getApplication());
     //开启计步Service，同时绑定Activity进行aidl通信
-    Intent intent = new Intent(this, TodayStepService.class);
-    startService(intent);
-    bindService(intent, new ServiceConnection() {
+    Intent intent = new Intent(_context, TodayStepService.class);
+    _context.startService(intent);
+    _context.bindService(intent, new ServiceConnection() {
       @Override
       public void onServiceConnected(ComponentName name, IBinder service) {
         //Activity和Service通过aidl进行通信
@@ -117,9 +119,7 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
           e.printStackTrace();
         }
 //        mDelayHandler.sendEmptyMessageDelayed(REFRESH_STEP_WHAT, TIME_INTERVAL_REFRESH);
-
       }
-
       @Override
       public void onServiceDisconnected(ComponentName name) {
 
@@ -128,7 +128,6 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
 
 
   }
-
 
   class TodayStepCounterCall implements Handler.Callback {
 
