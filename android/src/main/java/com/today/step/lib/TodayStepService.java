@@ -14,6 +14,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.today.step.lib.log.JLoggerConstant;
 import com.today.step.lib.log.JLoggerWraper;
@@ -184,7 +185,7 @@ public class TodayStepService extends Service implements Handler.Callback {
 
         sHandler.removeMessages(HANDLER_WHAT_REFRESH_NOTIFY_STEP);
         sHandler.sendEmptyMessageDelayed(HANDLER_WHAT_REFRESH_NOTIFY_STEP, REFRESH_NOTIFY_STEP_DURATION);
-
+        Log.d(TAG, "onStartCommand: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         return START_STICKY;
     }
 

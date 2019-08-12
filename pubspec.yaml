@@ -14,5 +14,5 @@ dependencies:
 # The following section is specific to Flutter.
 flutter:
   plugin:
-    androidPackage: cachet.plugins.pedometer
+    androidPackage: com.today.step.lib
     pluginClass: PedometerPlugin

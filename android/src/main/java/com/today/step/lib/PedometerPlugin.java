@@ -36,6 +36,7 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
 
   private ISportStepInterface iSportStepInterface;
 
+  int stepCount = 0;
   /**
    * Plugin registration.
    */
@@ -78,11 +79,16 @@ public class PedometerPlugin extends FlutterActivity implements EventChannel.Str
       @TargetApi(Build.VERSION_CODES.CUPCAKE)
       @Override
       public void onSensorChanged(SensorEvent event) {
-        int stepCount = (int) event.values[0];
-        try {
-          stepCount = iSportStepInterface.getCurrentTimeSportStep();
-        } catch (RemoteException e) {
-          e.printStackTrace();
+//        stepCount = (int) event.values[0];
+        if(iSportStepInterface == null){
+          stepCount = 888;
+        }else {
+          try {
+            stepCount = iSportStepInterface.getCurrentTimeSportStep();
+          } catch (RemoteException e) {
+            e.printStackTrace();
+            stepCount = -11;
+          }
         }
         events.success(stepCount);
       }
