@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-61:12
-INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-61:12
-INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-61:12
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-62:12
+INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-62:12
+INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:1:1-62:12
 	package
 		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:2:5-33
 		INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml
@@ -29,84 +29,88 @@ uses-permission#com.android.launcher.permission.READ_SETTINGS
 ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:8:5-85
 	android:name
 		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:8:22-82
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:9:22-74
 uses-feature#android.hardware.sensor.stepcounter
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:11:5-13:35
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:12:5-14:35
 	android:required
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:13:9-32
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:14:9-32
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:12:9-59
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:13:9-59
 uses-feature#android.hardware.sensor.stepdetector
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:14:5-16:35
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:15:5-17:35
 	android:required
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:16:9-32
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:17:9-32
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:15:9-60
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:16:9-60
 application
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:18:5-59:19
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:19:5-60:19
 service#com.today.step.lib.TodayStepService
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:21:9-39:19
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:22:9-40:19
 	android:process
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:25:13-41
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:26:13-41
 	android:enabled
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:23:13-35
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:24:13-35
 	android:launchMode
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:26:13-48
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:27:13-48
 	android:exported
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:24:13-37
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:25:13-37
 	android:priority
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:27:13-36
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:22:13-45
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:23:13-45
 intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED+action:name:android.intent.action.ACTION_TIME_TICK+action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.MEDIA_MOUNTED+action:name:android.intent.action.USER_PRESENT
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:28:13-38:29
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:29:13-39:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:31:17-79
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:32:17-79
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:31:25-76
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:32:25-76
 action#android.intent.action.DATE_CHANGED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:32:17-77
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:32:25-74
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:33:25-74
 action#android.intent.action.MEDIA_MOUNTED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:33:17-78
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:34:17-78
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:33:25-75
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:34:25-75
 action#android.intent.action.USER_PRESENT
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:34:17-77
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:34:25-74
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:35:25-74
 action#android.intent.action.ACTION_TIME_TICK
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:35:17-81
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:36:17-81
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:35:25-78
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:36:25-78
 action#android.intent.action.ACTION_POWER_CONNECTED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:36:17-87
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:37:17-87
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:36:25-84
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:37:25-84
 action#android.intent.action.ACTION_POWER_DISCONNECTED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:37:17-90
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:38:17-90
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:37:25-87
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:38:25-87
 receiver#com.today.step.lib.TodayStepBootCompleteReceiver
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:42:9-49:20
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:43:9-50:20
 	android:enabled
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:44:13-35
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:45:13-35
 	android:exported
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:45:13-37
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:43:13-58
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:44:13-58
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:46:13-48:29
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:47:13-49:29
 receiver#com.today.step.lib.TodayStepShutdownReceiver
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:52:9-57:20
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:53:9-58:20
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:52:19-60
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:53:19-60
 intent-filter#action:name:android.intent.action.ACTION_SHUTDOWN
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:53:13-56:29
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:54:13-57:29
 action#android.intent.action.ACTION_SHUTDOWN
-ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:55:17-80
+ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:56:17-80
 	android:name
-		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:55:25-77
+		ADDED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml:56:25-77
 uses-sdk
 INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\worksapce\workspace-flutter\plugins\shbluehour-pedometer\android\src\main\AndroidManifest.xml
